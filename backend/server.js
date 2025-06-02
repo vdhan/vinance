@@ -1,15 +1,13 @@
 import Fastify from 'fastify';
+import index from './index.js';
 
 const fastify = Fastify({logger: true});
-
-fastify.get('/', async (request, reply) => {
-  reply.send({hello: 'world'});
-});
+fastify.register(index);
 
 try {
   await fastify.listen({
+    port: 3000,
     host: '0.0.0.0',
-    port: 3000
   });
 } catch (err) {
   fastify.log.error(err);
