@@ -6,6 +6,8 @@
     "start": "node --watch-path=. server.js"
   },
   "dependencies": {
-    "fastify": "^5.3.3"
+    "fastify": "^5.3.3",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
   }
 }
